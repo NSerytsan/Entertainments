@@ -1,0 +1,20 @@
+﻿@page
+@model ButtonGame.Pages.ButtonsModel
+@{
+    ViewData["Title"] = "Button game";
+}
+}
+
+<div class="text-center text-light">
+    <h2>Гра з кнопкою</h2>
+    <div class="buttonGroup">
+        <button class="button--loose two" onclick="looseButton()">Програти</button>
+        <button class="button--win one">Виграти</button>
+    </div>
+</div>
+<script src="./js/winButton.js"></script>
+<script>
+function looseButton() {
+    alert("Нехай щастить!");
+}
+</script>
