@@ -73,7 +73,7 @@ body {
     margin-top: 150px;
 }
 
-    button {
+    .game {
         position: absolute;
         display: flex;
         cursor: pointer;
@@ -135,7 +135,129 @@ body {
         -moz-box-shadow: 10px 10px 99px 6px rgba(185, 231, 105, 1);
         box-shadow: 10px 10px 99px 6px rgba(185, 231, 105, 1);
     }
-#canvas {
-    border: 2px solid white;
-    background-color: antiquewhite;
+
+    button{
+        appearance: none;
+        border: none;
+        outline: none;
+        background: none;
+    }
+
+#new-task-form{
+    display: flex;
+}
+#new-task-input{
+    flex: 1 1 0%;
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-right: 1rem;
+    font-size: 1.25rem;
+}
+
+#new-task-submit{
+    font-size: 1.25rem;
+    font-weight: 700;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+#new-task-submit:hover{
+    opacity: 0.8;
+}
+
+#new-task-submit:active{
+    opacity: 0.6;
+}
+
+main{
+    flex: 1 1 0%;
+    padding: 2rem 1rem;
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.task-list{
+    padding: 1rem;
+}
+.task-list h2 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+}
+#tasks .task{
+    display:flex;
+    justify-content: space-between;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+
+#tasks .task .content{
+    flex: 1 1 0%;
+}
+
+#tasks .task .content .text{
+    border: none;
+    font-size: 1.125rem;
+    width: 100%;
+    display: block;
+    transition: 0.4s;
+}
+
+#tasks .task .content .text:not(:read-only){
+    color: darkblue;
+}
+
+#tasks .task .actions{
+    display: flex;
+    margin: 0 -0.5rem;
+}
+
+#tasks .actions button{
+    cursor: pointer;
+    margin: 0 2rem 0 2rem;
+    font-size: 1.125rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: 0.4s;
+}
+
+#tasks .actions button:hover {
+    opacity: 0.8;
+}
+
+#tasks .actions button:active {
+    opacity: 0.6;
+}
+
+.task .actions .edit {
+    background: #4cc9f0;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border-radius: 1rem;
+}
+
+.task .actions .edit:hover {
+    background-color: #4cc9f0;
+    -webkit-box-shadow: 10px 10px 99px 6px rgba(76,201,240,1);
+    -moz-box-shadow: 10px 10px 99px 6px rgba(76,201,240,1);
+    box-shadow: 10px 10px 99px 6px rgba(76,201,240,1);
+}
+
+.task .actions .delete {
+    background: #f038ff;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border-radius: 1rem;
+}
+
+.task .actions .delete:hover{
+    background-color: #f038ff;
+    -webkit-box-shadow: 10px 10px 99px 6px rgba(240, 56, 255, 1);
+    -moz-box-shadow: 10px 10px 99px 6px rgba(240, 56, 255, 1);
+    box-shadow: 10px 10px 99px 6px rgba(240, 56, 255, 1);
 }
